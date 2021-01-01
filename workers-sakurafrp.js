@@ -1,5 +1,5 @@
 // 定义 Github 项目，文章会从这里读取
-const github_base = "air2006/cloudflare-worker-blog";
+const github_base = "air2006/worker-blog";
 
 // 设置站点信息
 var default_title	 = "0529 Blog - air2006官方博客";					// 站点标题（显示在浏览器标题栏）
@@ -11,7 +11,7 @@ var site_favicon	 = "https://cdn.zerodream.net/gitea/img/favicon.png";				// 站
 
 // 博主信息
 var owner_name = "air2006";									// 博主名字
-var owner_logo = "https://secure.gravatar.com/avatar/80962ca1ced98d0e679b2bc315d049f2?s=256"	// 博主头像
+var owner_logo = "https://pic3.zhimg.com/v2-0c3f191cdeb619763d21d58fae0aea79_is.jpg"	// 博主头像
 var owner_desc = "";					// 博主简介
 
 // 设置站点资源文件地址
@@ -304,14 +304,14 @@ async function bloghandle(request) {
 						<hr>
 						<div class="text-left">
 							<h4>友情链接</h4>
-							<p><a href="https://www.natfrp.org/" target="_blank">Sakura Frp</a></p>
+							<p><a href="https://www.zhihu.com/" target="_blank">知乎</a></p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-sm-12">
-				<p>Powered by CloudFlare Workers | <a href="https://github.com/kasuganosoras/cloudflare-worker-blog" target="_blank">Github</a></p>
+				<p>Powered by CloudFlare Workers </p>
 				<p>&copy; 2019 ${default_intitle}</p>
 				<br><br>
 				</div>

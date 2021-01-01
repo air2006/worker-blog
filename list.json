@@ -3,5 +3,10 @@
         "title": "Hello World",
         "time": "2020-01-01",
         "file": "posts/1.md"
+    },
+    {
+        "title": "习近平发表2021新年贺词",
+        "time": "2020-01-01",
+        "file": "posts/2.md"
     }
 ]

@@ -1,18 +1,18 @@
 // 定义 Github 项目，文章会从这里读取
-const github_base = "kasuganosoras/frp-blog";
+const github_base = "air2006/cloudflare-worker-blog";
 
 // 设置站点信息
-var default_title	 = "SakuraFrp Blog - 樱花内网穿透官方博客";					// 站点标题（显示在浏览器标题栏）
-var default_intitle	 = "SakuraFrp Blog";								// 站点名称（显示在首页）
-var default_description  = "欢迎访问 Sakura Frp 官方博客，本博客分享与 Frp 相关的技术以及记录一些日常。"; 	// 站点简介，有利于 SEO
-var site_domain		 = "blog.natfrp.org";								// 站点域名
-var site_subtitle	 = "樱花内网穿透官方博客";							// 站点副标题
+var default_title	 = "0529 Blog - air2006官方博客";					// 站点标题（显示在浏览器标题栏）
+var default_intitle	 = "0529 Blog";								// 站点名称（显示在首页）
+var default_description  = "欢迎访问 ir2006 官方博客"; 	// 站点简介，有利于 SEO
+var site_domain		 = "blog.daili001.workers.dev";								// 站点域名
+var site_subtitle	 = "air2006官方博客";							// 站点副标题
 var site_favicon	 = "https://cdn.zerodream.net/gitea/img/favicon.png";				// 站点 Logo
 
 // 博主信息
-var owner_name = "Akkariin";									// 博主名字
+var owner_name = "air2006";									// 博主名字
 var owner_logo = "https://secure.gravatar.com/avatar/80962ca1ced98d0e679b2bc315d049f2?s=256"	// 博主头像
-var owner_desc = "鸽子王/咸鱼/phper，日常水贴摸鱼，佛系出租服务器";					// 博主简介
+var owner_desc = "";					// 博主简介
 
 // 设置站点资源文件地址
 var css_bootstrap	 = "https://cdn.zerodream.net/css/bootstrap.min.css";		// Boostrap css 文件地址
@@ -275,7 +275,7 @@ async function bloghandle(request) {
 			description = resptxt.substring(0, 128).replace(/"/ig, "").replace(/\n/g, " ");
 			data += `</textarea>
 					<hr>
-					<div id="comments">评论区加载中 qwq</div>
+					<div id="comments"></div>
 				`;
 		} else {
 			data += `### 404 Not Found
@@ -324,8 +324,8 @@ async function bloghandle(request) {
 		<script src="${js_showdown_table}" type="text/javascript"></script>
 		<script src="${js_highlight}"></script>
 		<script src="${js_highlight_pack}"></script>
-		<script src="https://comments.zerodream.net/comments.js?s=2"></script>
-		<script type="text/javascript">
+		<script src=""></script>
+				<script type="text/javascript">
 			var init = {
 			site: "${site_domain}",
 			cid: "posts${urls.pathname}.md"
@@ -358,6 +358,7 @@ async function bloghandle(request) {
 				} catch(e) {}
 			});
 		</script>
+
 	</body>
 </html>
 	`;
@@ -389,3 +390,4 @@ async function handleRequest(request) {
 	}
 	return resp;
 }
+
